@@ -1,0 +1,1 @@
+cookiecutter ..\..\cookiecutter-templates\ueplugin

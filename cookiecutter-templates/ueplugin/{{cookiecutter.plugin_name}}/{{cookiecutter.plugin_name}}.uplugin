@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "{{cookiecutter.plugin_name}}",
+	"Description": "{{cookiecutter.plugin_name}}",
+	"Category": "Other",
+	"CreatedBy": "{{cookiecutter.company_name}}",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "{{cookiecutter.plugin_name}}",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
