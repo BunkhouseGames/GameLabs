@@ -15,6 +15,7 @@ core_plugins = [
     ["git@github.com:arctictheory/ATTools.git", "ATTools"],
     ["git@github.com:arctictheory/SideQuest.git", "SideQuest"],
     ["git@github.com:arctictheory/ATCommon.git", "ATCommon"],
+    ["git@github.com:arctictheory/LandmassEngine.git", "GenOS"],
 ]
 
 for url, name in core_plugins:
