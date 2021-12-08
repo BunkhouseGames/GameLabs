@@ -1,0 +1,1 @@
+git submodule add git@github.com:arctictheory/SyntyContent.git Plugins/SyntyContent
