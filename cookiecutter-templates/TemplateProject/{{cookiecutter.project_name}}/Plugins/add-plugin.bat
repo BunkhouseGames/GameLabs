@@ -1,1 +1,1 @@
-cookiecutter ..\..\cookiecutter-templates\ueplugin
+cookiecutter ..\GameLabs\cookiecutter-templates\ueplugin
