@@ -11,7 +11,7 @@ public class {{cookiecutter.project_name}}Target : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.AddRange(new string[]
 			{
-				""
+				"{{cookiecutter.project_name}}"
 			});
 	}
 }
