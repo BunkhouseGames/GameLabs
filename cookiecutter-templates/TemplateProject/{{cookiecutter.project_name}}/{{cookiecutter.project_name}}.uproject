@@ -8,7 +8,8 @@
 			"Name": "{{cookiecutter.project_name}}",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
-		},
+		}
+		],
 	"Plugins": [
 		{
 			"Name": "OculusVR",
@@ -160,11 +161,6 @@
 		{
 			"Name": "PerforceSourceControl",
 			"Enabled": false
-		},
-		{
-			"Name": "HoudiniEngine",
-			"Enabled": true
 		}
 	]
-}
 }
