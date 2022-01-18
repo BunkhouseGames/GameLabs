@@ -3,13 +3,6 @@
 	"EngineAssociation": "4.27",
 	"Category": "",
 	"Description": "",
-	"Modules": [
-		{
-			"Name": "{{cookiecutter.project_name}}",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-		],
 	"Plugins": [
 		{
 			"Name": "OculusVR",
