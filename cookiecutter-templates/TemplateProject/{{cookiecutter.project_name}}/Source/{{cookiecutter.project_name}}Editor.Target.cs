@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// {{cookiecutter.copyright}}
 
 using UnrealBuildTool;
 using System.Collections.Generic;

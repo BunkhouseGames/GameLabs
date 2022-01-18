@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// {{cookiecutter.copyright}}
 
 using UnrealBuildTool;
 using System.Collections.Generic;
@@ -9,7 +9,6 @@ public class {{cookiecutter.project_name}}Target : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		bUseLoggingInShipping = true;
 		ExtraModuleNames.AddRange(new string[]
 			{
 				""
