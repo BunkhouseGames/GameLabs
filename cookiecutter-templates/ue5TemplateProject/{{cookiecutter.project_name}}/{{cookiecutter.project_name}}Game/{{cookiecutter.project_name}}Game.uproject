@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{E8123226-4B33-56F4-981A-E2847D0B2D8D}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "{{cookiecutter.project_name}}Game",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	]
+}
