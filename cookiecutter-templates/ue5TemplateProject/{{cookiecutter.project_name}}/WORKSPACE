@@ -1,0 +1,1 @@
+workspace(name = "{{cookiecutter.project_name}}")
