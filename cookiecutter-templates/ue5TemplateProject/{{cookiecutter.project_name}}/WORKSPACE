@@ -1,1 +1,11 @@
-workspace(name = "{{cookiecutter.project_name}}")
+workspace(name = "MyWorkspace")
+load ("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
+
+
+new_git_repository(
+	name = "UnrealEngine",
+	remote = "git@github.com:EpicGames/UnrealEngine.git",
+	build_file = "//GameLabs/BuildRules:ue5_engine.BUILD",
+	commit = "da3a161677a3f03c509dc7a608f0af73bf0c008b",
+	shallow_since = "1648560230 -0400"
+	)
