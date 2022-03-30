@@ -1,1 +1,0 @@
-load ("@MyWorkspace//GameLabs/BuildRules:ue5_engine_rules.bzl", "build_client")
