@@ -33,7 +33,7 @@ def compile_engine(engine_root_path, project_path):
             "Win64",
             "Development",
             "UnrealPak",
-            "D:/Work/ArcticTheory/ProjectDawn/ProjectDawnGame/ProjectDawnPreview.uproject",
+            project_path,
             "-TargetType=Editor",
         ]
     )
@@ -100,12 +100,11 @@ def build_game(engine, project):
         # f"-archivedirectory={output_folder}",
     ]
 
-    flags = copy.copy(build_flags["existence_windows_shipping_client"])
+    flags = copy.copy(build_flags["kamo_linux_server"])
     cmd.extend(flags)
 
     subprocess.run(cmd)
 
 
-# compile_engine(engine, project)
-
+compile_engine(engine, project)
 build_game(engine, project)
