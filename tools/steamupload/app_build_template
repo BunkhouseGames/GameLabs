@@ -1,0 +1,15 @@
+"appbuild"
+{{
+	"appid" "{APP_ID}"
+	"desc" "{BUILD_DESCRIPTION}"
+	"buildoutput" "output"
+	"contentroot" ""
+	"setlive" "staging"
+	"preview" "0"
+	"local" ""
+	
+	"depots"
+	{{
+		"{DEPOT_ID}" "depot_build_{DEPOT_ID}.vdf"
+	}}
+}}
