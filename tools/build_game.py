@@ -18,7 +18,6 @@ build_flags = {
         "-cook",
         "-iterate",
         "-nop4",
-        "-nocompileeditor",
         "-build",
         "-stage",
         "-archive",
@@ -33,7 +32,6 @@ build_flags = {
         "-cook",
         "-iterate",
         "-nop4",
-        "-nocompileeditor",
         "-build",
         "-stage",
         "-archive",
@@ -48,7 +46,6 @@ build_flags = {
         "-targetplatform=Linux",
         "-cook",
         "-server",
-        "-nocompileeditor",
         "-build",
         "-stage",
         "-archive",
@@ -76,5 +73,7 @@ def build_game(engine, project, profile, output_directory):
     cmd.extend(flags)
 
     subprocess.run(cmd)
+
+print(f"Engine Path: {engine.absolute()}")
 
 build_game(engine, project,profile, output_directory)
