@@ -69,9 +69,8 @@ def build_game(engine, project, profile, output_directory):
     ]
 
     flags = copy.copy(build_flags[profile])
-    
     cmd.extend(flags)
-
+    
     subprocess.run(cmd)
 
 print(f"Engine Path: {engine.absolute()}")
