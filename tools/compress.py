@@ -3,6 +3,7 @@ import zipfile
 import pathlib
 
 input_folder_path = sys.argv[1]
+output_folder_file_path = sys.argv[2]
 
 directories_to_exclude = [".git", ".vs"]
 extentions_to_exclude = [".pdb"]
@@ -34,7 +35,7 @@ for i in pathlib.Path(input_folder_path).rglob("*"):
 
 print(f"Number of files in the original directory: {count} and {len(files_to_zip)} will be added to the compressed file")
 
-zf = zipfile.ZipFile('zipfile_write.zip', mode='w',compression=zipfile.ZIP_DEFLATED, compresslevel=0)
+zf = zipfile.ZipFile(output_folder_file_path, mode='w',compression=zipfile.ZIP_DEFLATED, compresslevel=0)
 
 
 print(f"Starting to process: {len(files_to_zip)} files")
