@@ -18,3 +18,10 @@ http_archive(
     sha256 = "67161cab713a52f6658b76274f8dbe0cd2f256aab1e84f94cd557d4a906fa5d2",
     build_file = "//:BUILD.downloaded-python"
   )
+
+
+  new_local_repository(
+  	name = "local-ue5",
+  	path = "UnrealEngine/"
+  	build_file = "//GameLabs/BuildRules/engine:ue5_engine_rules.bzl"
+  )
