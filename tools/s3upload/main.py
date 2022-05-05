@@ -6,16 +6,14 @@ import sys
 import pathlib
 
 name = sys.argv[1]
-tenant = sys.argv[2]
+build_target = sys.argv[2]
 artifact_folder = sys.argv[3]
 
 BUCKET_NAME = "at-server-builds"
 artifact_folder_path = pathlib.Path(artifact_folder).as_posix()
 
-
 def upload_build():
     name = os.path.split(artifact_folder_path)[-1]
-    aws_target = f"{tenant}/{name}/"
 
     s3 = boto3.client("s3")
 
