@@ -1,1 +1,1 @@
-exports_files(["build_game.py"])
+exports_files(["build_game.py", "generatemanifest/main.py"])
