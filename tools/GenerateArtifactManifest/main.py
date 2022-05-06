@@ -26,7 +26,7 @@ def get_branch():
     return subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"], universal_newlines=True).strip()
 
 def get_version():
-    return "Temp"
+    return "Dawn_" + str(datetime.datetime.utcnow().isoformat()) +"_"+ get_sha() 
 
 def get_user_name():
     return "Not-Set"
@@ -43,7 +43,6 @@ def write_manifest(repo_root, project_root, manifest_file, name):
         "user": get_user_name(),
         "executable": LINUX_SERVER_EXECUTABLE,
     }
-
     print(f"Generating manifest for: {name} into {manifest_file}")
 
     with open(str(manifest_file), "w") as json_file:
