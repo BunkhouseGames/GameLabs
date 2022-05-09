@@ -1,27 +1,26 @@
-workspace(name = "MyWorkspace")
-
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-load ("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
-
-
-new_git_repository(
-	name = "UnrealEngine",
-	remote = "git@github.com:EpicGames/UnrealEngine.git",
-	build_file = "//GameLabs/BuildRules/engine:ue5_engine.BUILD",
-	commit = "da3a161677a3f03c509dc7a608f0af73bf0c008b",
-	shallow_since = "1648560230 -0400"
-	)
 
 http_archive(
-    name = "downloaded-python",
-    urls = ["https://www.python.org/ftp/python/3.9.10/python-3.9.10-embed-amd64.zip"],
-    sha256 = "67161cab713a52f6658b76274f8dbe0cd2f256aab1e84f94cd557d4a906fa5d2",
-    build_file = "//:BUILD.downloaded-python"
-  )
+    name = "rules_python",
+    sha256 = "9fcf91dbcc31fde6d1edb15f117246d912c33c36f44cf681976bd886538deba6",
+    strip_prefix = "rules_python-0.8.0",
+    url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.8.0.tar.gz",
+)
 
+load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
-  new_local_repository(
-  	name = "local-ue5",
-  	path = "UnrealEngine/"
-  	build_file = "//GameLabs/BuildRules/engine:ue5_engine_rules.bzl"
-  )
+python_register_toolchains(
+    name = "python3_9",
+    python_version = "3.9",
+)
+
+load("@python3_9//:defs.bzl", "interpreter")
+
+"""
+load("@rules_python//python:pip.bzl", "pip_install")
+pip_install(
+    name = "pip_install_package",
+    requirements = "//:requirements.txt",
+    python_interpreter_target = interpreter
+)
+"""
