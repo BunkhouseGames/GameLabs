@@ -1,1 +1,1 @@
-cookiecutter cookiecutter-templates\ue5TemplateProject -o _gen/
+cookiecutter templates\ue5 -o _gen/
