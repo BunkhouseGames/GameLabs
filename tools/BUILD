@@ -32,4 +32,11 @@ py_binary(
   srcs = ["//GameLabs/tools:GenerateArtifactManifest/main.py"],
 )
 
-exports_files(["build_game.py"])
+py_binary(
+  name = "cook_windows_server_content",
+  main = "//GameLabs/tools:cook_content.py",
+  srcs = ["//GameLabs/tools:cook_content.py"],
+)
+
+
+exports_files(["build_game.py", "cook_content.py"])
