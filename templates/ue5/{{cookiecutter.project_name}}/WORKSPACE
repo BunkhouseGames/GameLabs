@@ -8,6 +8,11 @@ http_archive(
     url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.8.0.tar.gz",
 )
 
+local_repository(
+    name = "ue_project",
+    path = "{{cookiecutter.project_name}}Game",
+)
+
 git_repository(
     name = "unreal_rules",
     branch = "master", 
