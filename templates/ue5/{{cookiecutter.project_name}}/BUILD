@@ -1,0 +1,1 @@
+bazel.exe run //:build_game_client -- "%~dp0/UnrealEngine" "%~dp0/{{cookiecutter.project_name}}Game/{{cookiecutter.project_name}}Game.uproject" "existence_windows_shipping_client" "%~dp0/out/"

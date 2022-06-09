@@ -1,5 +1,3 @@
-git submodule add git@github.com:arctictheory/GameLabs.git
-
 git submodule add git@github.com:arctictheory/kamo.git {{cookiecutter.project_name}}Game/Plugins/ATCorePlugins/Kamo
 git submodule add git@github.com:arctictheory/RedisClient.git {{cookiecutter.project_name}}Game/Plugins/ATCorePlugins/RedisClient
 git submodule add git@github.com:arctictheory/ATTools.git {{cookiecutter.project_name}}Game/Plugins/ATCorePlugins/ATTools
