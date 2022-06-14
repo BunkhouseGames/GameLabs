@@ -38,5 +38,12 @@ py_binary(
   srcs = ["//GameLabs/tools:cook_content.py"],
 )
 
+py_binary(
+  name = "clean_game_project",
+  main = "//GameLabs/tools:clean_game_project.py",
+  srcs = ["//GameLabs/tools:clean_game_project.py"],
+)
 
-exports_files(["build_game.py", "cook_content.py"])
+
+
+exports_files(["build_game.py", "cook_content.py", "clean_game_project.py"])
