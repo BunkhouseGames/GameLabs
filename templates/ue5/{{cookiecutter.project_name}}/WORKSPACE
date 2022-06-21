@@ -1,6 +1,6 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
-load("@rules_python//python:repositories.bzl", "python_register_toolchains")
+
 
 git_repository(
     name = "rules_unreal",
@@ -21,6 +21,7 @@ http_archive(
     url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.8.0.tar.gz",
 )
 
+load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 python_register_toolchains(
     name = "python3_9",
     python_version = "3.9",
