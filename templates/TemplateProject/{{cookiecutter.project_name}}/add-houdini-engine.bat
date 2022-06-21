@@ -1,1 +1,0 @@
-git submodule add git@github.com:sideeffects/HoudiniEngineForUnreal.git Plugins/HoudiniEngine

@@ -1,1 +1,0 @@
-git submodule add git@github.com:arctictheory/SyntyContentData.git Content/ContentPacks/Synty
