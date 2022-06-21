@@ -1,32 +1,25 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
+git_repository(
+    name = "rules_unreal",
+    remote = "git@github.com:arctictheory/bazel_rules_unreal.git",
+    commit = "d54e6601b90cbf7a79fb186bf9fa5099bf63f529"
+    )
+
+new_local_repository(
+    name = "unreal_engine",
+    build_file = "@rules_unreal//ue5/engine:ue5_engine.BUILD",
+    path = "/UnrealEngine"
+    )
+    
 http_archive(
     name = "rules_python",
     sha256 = "9fcf91dbcc31fde6d1edb15f117246d912c33c36f44cf681976bd886538deba6",
     strip_prefix = "rules_python-0.8.0",
     url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.8.0.tar.gz",
 )
-
-local_repository(
-    name = "ue_project",
-    path = "{{cookiecutter.project_name}}Game",
-)
-
-git_repository(
-    name = "unreal_rules",
-    branch = "master", 
-    remote = "git@github.com:arctictheory/bazel_rules_unreal.git"
-)
-
-http_archive(
-    name = "git-executable",
-    sha256 = "https://github.com/git-for-windows/git/releases/download/v2.36.1.windows.1/Git-2.36.1-64-bit.exe",
-    url = "https://github.com/git-for-windows/git/releases/download/v2.36.1.windows.1/Git-2.36.1-64-bit.exe",
-    build_file = "//GameLabs/BuildRules/other:/BUILD.downloaded-git"
-)
-
-load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
 python_register_toolchains(
     name = "python3_9",

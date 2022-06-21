@@ -1,1 +1,5 @@
-bazel.exe run //:build_game_client -- "%~dp0/UnrealEngine" "%~dp0/{{cookiecutter.project_name}}Game/{{cookiecutter.project_name}}Game.uproject" "existence_windows_shipping_client" "%~dp0/out/"
+load("@rules_unreal//:unreal_rules.bzl", "build_game")
+
+build_game(name = "BuildGame",
+  build_tool = "@rules_unreal//ue5/buildscripts:build_game_client",
+  )
