@@ -25,6 +25,7 @@ build_flags = {
         "-nodebuginfo",
         "-noPCH",
         "-prereqs",
+        "-iostore",
         "-CrashReporter",
     ],
     "existence_windows_shipping_client": [
@@ -35,6 +36,7 @@ build_flags = {
         "-build",
         "-stage",
         "-archive",
+        "-iostore",
         "-nodebuginfo",
         "-noPCH",
         "-prereqs",
@@ -48,6 +50,7 @@ build_flags = {
         "-build",
         "-stage",
         "-archive",
+        "-iostore",
         "-NoClient",
         "-package",
         "-nodebuginfo",
