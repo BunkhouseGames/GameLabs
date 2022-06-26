@@ -29,7 +29,7 @@ build_flags = {
         "-CrashReporter",
     ],
     "existence_windows_shipping_client": [
-        "-clientconfig=Development",
+        "-clientconfig=Shipping",
         "-cook",
         "-iterate",
         "-nop4",
