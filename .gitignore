@@ -2,3 +2,5 @@ _gen
 steam/
 
 __pycache__
+
+_generated_projects
