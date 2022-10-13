@@ -1,0 +1,1 @@
+python %~dp0/steamupload/main.py arctictheorydev Y8Plq7L9FQgyVm 1401530 1401531 %~dp0/../ProjectDawnGame/Saved/StagedBuilds/Windows/

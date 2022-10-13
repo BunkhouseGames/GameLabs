@@ -1,1 +1,0 @@
-exports_files(["main.py", "depot_build_template", "app_build_template"])

@@ -1,0 +1,15 @@
+{
+    "existence_server": [
+        "-serverconfig=Development",
+        "-targetplatform=Linux",
+        "-cook",
+        "-server",
+        "-build",
+        "-stage",
+        "-iostore",
+        "-NoClient",
+        "-package",
+        "-targetplatform=Linux",
+        "-prereqs"
+    ]
+}

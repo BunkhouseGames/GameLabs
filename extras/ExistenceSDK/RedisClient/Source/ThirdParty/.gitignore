@@ -1,0 +1,19 @@
+# This adds extra ignores to the .gitignore provided by hiredis, to remove build artifacts and such.
+
+hiredis/*.vcxproj
+hiredis/*.filters
+
+# cmake artifacts
+CmakeFiles/
+CmakeCache.txt
+*.cmake
+
+hiredis.dir/
+hiredis.tlog/
+ZERO_CHECK
+*.obj
+*.recipe
+
+# Whitelist back in static library files as they are part of the deployment and are only re-generated
+# specifically when needed.
+!Lib/**

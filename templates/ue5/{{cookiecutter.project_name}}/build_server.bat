@@ -1,2 +1,0 @@
-.\GameLabs\bazel.exe run //GameLabs/tools:build_game_server -- "%~dp0/UnrealEngine" "%~dp0/{{cookiecutter.project_name}}Game/{{cookiecutter.project_name}}Game.uproject" "kamo_linux_server" "%~dp0/out/"
-.\GameLabs\bazel.exe run //GameLabs/tools:generate_manifest_file --  ProjectDawnPreview %~dp0 %~dp0/{{cookiecutter.project_name}}Game %~dp0/out/LinuxServer/

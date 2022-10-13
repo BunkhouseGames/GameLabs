@@ -1,0 +1,16 @@
+{
+	"existence_client": [
+        "-clientconfig=Development",
+        "-cook",
+        "-iterate",
+        "-nop4",
+        "-build",
+        "-stage",
+        "-pak",
+        "-nodebuginfo",
+        "-noPCH",
+        "-prereqs",
+        "-iostore",
+        "-CrashReporter"
+    ]
+}
