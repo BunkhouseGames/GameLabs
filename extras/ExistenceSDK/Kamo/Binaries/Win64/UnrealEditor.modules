@@ -1,0 +1,10 @@
+{
+	"BuildId": "19505902",
+	"Modules": 
+	{
+		"Kamo": "UnrealEditor-Kamo.dll",
+		"KamoClient": "UnrealEditor-KamoClient.dll",
+		"KamoEditor": "UnrealEditor-KamoEditor.dll",
+		"KamoRuntime": "UnrealEditor-KamoRuntime.dll"
+	}
+}

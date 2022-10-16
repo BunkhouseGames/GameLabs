@@ -1,0 +1,8 @@
+{
+	"BuildId": "19505902",
+	"Modules": 
+	{
+		"ATMissionSystem": "UnrealEditor-ATMissionSystem.dll",
+		"ATMissionSystemEditor": "UnrealEditor-ATMissionSystemEditor.dll"
+	}
+}
