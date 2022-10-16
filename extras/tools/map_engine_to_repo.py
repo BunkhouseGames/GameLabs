@@ -1,3 +1,5 @@
+from utilities import find_mono_repo_root
+
 import winreg
 import _winapi
 import sys
@@ -39,12 +41,15 @@ def get_unreal_path_from_registry(version):
         raise
 
 @cli.command()
-@click.option('--root_directory', required=True, type=str, help='Root path for the repo')
+@click.option('--root_directory', type=str, help='Root path for the repo')
 @click.option('--engine_path', required=True, type=str, help='Unreal Engine version')
 
 def map_source_engine(root_directory, engine_path):
     """Maps Source Engine to Repo"""
-    root_directory = pathlib.Path(root_directory).resolve()
+    if not root_directory:
+        root_directory = find_mono_repo_root()
+    else:
+        root_directory = pathlib.Path(root_directory).resolve()
     
     ue_from_registry = pathlib.Path(engine_path)
     ue_target_in_repo = pathlib.Path(root_directory).joinpath("UnrealEngine")
@@ -52,11 +57,15 @@ def map_source_engine(root_directory, engine_path):
     make_symlink_from_custom_path(ue_target_in_repo, ue_from_registry)
 
 @cli.command()
-@click.option('--root_directory', required=True, type=str, help='Root path for the repo')
+@click.option('--root_directory', type=str, help='Root path for the repo')
 @click.option('--env_var', default="Unreal-Engine-Source", help='Environment Variable')
 def map_from_environment_variable(root_directory, env_var):
     """Checks for the SOURCE-UNREAL uses the  SOURCE-UNREAL"""
-    root_directory = pathlib.Path(root_directory).resolve()
+    if not root_directory:
+        root_directory = find_mono_repo_root()
+    else:
+        root_directory = pathlib.Path(root_directory).resolve()
+
     ue_target_in_repo = pathlib.Path(root_directory).joinpath("UnrealEngine")
  
     engine_source =  os.getenv(env_var)
@@ -68,12 +77,14 @@ def map_from_environment_variable(root_directory, env_var):
     make_symlink_from_custom_path(ue_target_in_repo,engine_source)
 
 @cli.command()
-@click.option('--root_directory', required=True, type=str, help='Root path for the repo')
+@click.option('--root_directory', type=str, help='Root path for the repo')
 @click.option('--unreal_version', default="5.0", help='Unreal Engine version')
-
 def map_from_launcher(root_directory, unreal_version):
     """Map Pre-Installed Engine to repo"""
-    root_directory = pathlib.Path(root_directory).resolve()
+    if not root_directory:
+        root_directory = find_mono_repo_root()
+    else:
+        root_directory = pathlib.Path(root_directory).resolve()
     
     ue_from_registry = pathlib.Path(get_unreal_path_from_registry(unreal_version))
     ue_target_in_repo = pathlib.Path(root_directory).joinpath("UnrealEngine")

@@ -1,10 +1,9 @@
 import sys
 import pathlib
-import copy
 import subprocess
-import glob
 import json
 import click
+from utilities import get_unreal_engine
 
 import engine_utils
 
@@ -25,6 +24,7 @@ def _run_commandlet(commandlet, arguments):
 
 def get_build_configs():
     build_configs_dict = {}
+    # TODO this needs to be made relative to the root 
     build_configs_root = pathlib.Path(__file__).parent.joinpath("buildconfigs")
 
     print(build_configs_root)
@@ -55,7 +55,7 @@ def get_project_file_path():
     return uproject_file.absolute()
 
 def run_action(profile, should_write_log = False, extra_arguments = ""):
-    engine = engine_utils.get_engine_root()
+    engine = get_unreal_engine()
     project = get_project_file_path()
 
     run_uat = pathlib.Path(engine).joinpath("Engine", "Build", "BatchFiles", "RunUAT.bat")
