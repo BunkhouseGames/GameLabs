@@ -8,7 +8,7 @@ subprocess.run(["git", "init"])
 gamelabs_root = pathlib.Path(os.getcwd()).parent.parent
 new_project_root = pathlib.Path(os.getcwd())
 
-# print(f"New project generated at: {os.getcwd()}")
+print(f"New project generated at: {os.getcwd()}")
 
 
 def _get_project_name():
