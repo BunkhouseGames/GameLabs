@@ -1,0 +1,5 @@
+{
+  "module_name": "",
+  "_copyright": "Copyright Arctic Theory ehf. All Rights Reserved.",
+  "_apideclspec": "{{cookiecutter.module_name|upper}}_API"
+}
