@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class AT{{cookiecutter.module_name}} : ModuleRules
+public class AT{{cookiecutter.module_name}}Mechanics : ModuleRules
 {
-    public AT{{cookiecutter.module_name}}(ReadOnlyTargetRules Target) : base(Target)
+    public AT{{cookiecutter.module_name}}Mechanics(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
